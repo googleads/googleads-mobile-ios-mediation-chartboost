@@ -22,22 +22,28 @@ let package = Package(
   products: [
     .library(
       name: "ChartboostAdapterTarget",
-      targets: ["ChartboostAdapterTarget"]
+      targets: ["ChartboostAdapterTarget", "ChartboostSDK"]
     )
   ],
   targets: [
     .target(
       name: "ChartboostAdapterTarget",
       dependencies: [
-        .target(name: "Adapter")
+        .target(name: "ChartboostAdapter")
       ],
       path: "ChartboostAdapterTarget"
     ),
     .binaryTarget(
-      name: "Adapter",
+      name: "ChartboostAdapter",
       url:
-        "https://dl.google.com/googleadmobadssdk/mediation/ios/chartboost/ChartboostAdapter-9.9.1.0.zip",
-      checksum: ""
+        "https://dl.google.com/googleadmobadssdk/mediation/ios/chartboost/ChartboostAdapter-9.11.0.1.zip",
+      checksum: "33e2978889354f11b4b6ed4cf902a9b5265b4033c1a447039d82afdfb50084a9"
+    ),
+    .binaryTarget(
+      name: "ChartboostSDK",
+      url:
+        "https://s3.amazonaws.com/chartboost/sdk/9.11.0/Chartboost-iOS-9.11.0.zip",
+      checksum: "45e0b6bda95cedea7a4b55da023aedd97e8bbb9e6abc121fb207edf008e6ec6b"
     ),
   ]
 )

@@ -25,11 +25,18 @@ let package = Package(
       targets: ["ChartboostAdapterTarget", "ChartboostSDK"]
     )
   ],
+  dependencies: [
+    .package(
+      url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git",
+      from: "12.0.0"
+    )
+  ],
   targets: [
     .target(
       name: "ChartboostAdapterTarget",
       dependencies: [
-        .target(name: "ChartboostAdapter")
+        .target(name: "ChartboostAdapter"),
+        .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"),
       ],
       path: "ChartboostAdapterTarget"
     ),

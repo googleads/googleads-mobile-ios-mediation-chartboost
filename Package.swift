@@ -18,7 +18,7 @@ import PackageDescription
 
 let package = Package(
   name: "ChartboostAdapter",
-  platforms: [.iOS(.v12)],
+  platforms: [.iOS(.v13)],
   products: [
     .library(
       name: "ChartboostAdapterTarget",
@@ -28,7 +28,7 @@ let package = Package(
   dependencies: [
     .package(
       url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git",
-      from: "12.0.0"
+      from: "13.0.0"
     )
   ],
   targets: [
@@ -43,8 +43,8 @@ let package = Package(
     .binaryTarget(
       name: "ChartboostAdapter",
       url:
-        "https://dl.google.com/googleadmobadssdk/mediation/ios/chartboost/ChartboostAdapter-9.11.0.1.zip",
-      checksum: "33e2978889354f11b4b6ed4cf902a9b5265b4033c1a447039d82afdfb50084a9"
+        "https://dl.google.com/googleadmobadssdk/mediation/ios/chartboost/ChartboostAdapter-9.11.0.3.zip",
+      checksum: "db7e54c99c10cd925e816de0c697996a361e19e6fe3be9086e4d2827db92e995"
     ),
     .binaryTarget(
       name: "ChartboostSDK",

@@ -43,13 +43,13 @@ let package = Package(
     .binaryTarget(
       name: "ChartboostAdapter",
       url:
-        "https://dl.google.com/googleadmobadssdk/mediation/ios/chartboost/ChartboostAdapter-9.12.0.1.zip",
+        "https://dl.google.com/googleadmobadssdk/mediation/ios/chartboost/ChartboostAdapter-9.13.0.0.zip",
       checksum: "4d928d74631b15607fec1874b9c7398a75667615ca37176d6d53b89bdb699079"
     ),
     .binaryTarget(
       name: "ChartboostSDK",
       url:
-        "https://s3.amazonaws.com/chartboost/sdk/9.12.0/Chartboost-iOS-9.12.0.zip",
+        "https://s3.amazonaws.com/chartboost/sdk/9.13.0/Chartboost-iOS-9.13.0.zip",
       checksum: "8a611fed3d3e76be3faf13ffcfda6703c90abcbf415d610a6270d515dc9ae271"
     ),
   ]

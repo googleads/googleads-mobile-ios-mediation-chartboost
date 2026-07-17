@@ -1,4 +1,4 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.6
 
 // Copyright 2025 Google LLC.
 //
@@ -22,20 +22,25 @@ let package = Package(
   products: [
     .library(
       name: "ChartboostAdapterTarget",
-      targets: ["ChartboostAdapterTarget", "ChartboostSDK"]
+      targets: ["ChartboostAdapterTarget"]
     )
   ],
   dependencies: [
     .package(
+      url: "https://github.com/ChartBoost/chartboost-monetization-ios-sdk.git",
+      exact: "9.13.0"
+    ),
+    .package(
       url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git",
       from: "13.3.0"
-    )
+    ),
   ],
   targets: [
     .target(
       name: "ChartboostAdapterTarget",
       dependencies: [
         .target(name: "ChartboostAdapter"),
+        .product(name: "ChartboostSDK", package: "chartboost-monetization-ios-sdk"),
         .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"),
       ],
       path: "ChartboostAdapterTarget"
@@ -44,13 +49,7 @@ let package = Package(
       name: "ChartboostAdapter",
       url:
         "https://dl.google.com/googleadmobadssdk/mediation/ios/chartboost/ChartboostAdapter-9.13.0.0.zip",
-      checksum: "4d928d74631b15607fec1874b9c7398a75667615ca37176d6d53b89bdb699079"
-    ),
-    .binaryTarget(
-      name: "ChartboostSDK",
-      url:
-        "https://s3.amazonaws.com/chartboost/sdk/9.13.0/Chartboost-iOS-9.13.0.zip",
-      checksum: "8a611fed3d3e76be3faf13ffcfda6703c90abcbf415d610a6270d515dc9ae271"
+      checksum: "e015aa881a724d0c2b4f13503055fa7c0662767c39b5b90eae938a90ddb71eab"
     ),
   ]
 )

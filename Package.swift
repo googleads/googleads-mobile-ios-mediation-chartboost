@@ -28,7 +28,7 @@ let package = Package(
   dependencies: [
     .package(
       url: "https://github.com/ChartBoost/chartboost-monetization-ios-sdk.git",
-      exact: "9.14.0"
+      exact: "9.14.1"
     ),
     .package(
       url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git",
@@ -48,7 +48,7 @@ let package = Package(
     .binaryTarget(
       name: "ChartboostAdapter",
       url:
-        "https://dl.google.com/googleadmobadssdk/mediation/ios/chartboost/ChartboostAdapter-9.14.0.0.zip",
+        "https://dl.google.com/googleadmobadssdk/mediation/ios/chartboost/ChartboostAdapter-9.14.1.0.zip",
       checksum: "c5ef1916efe794110d113acca74e1f9e51c64ea7a97df383473a83d87177ec16"
     ),
   ]

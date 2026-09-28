@@ -49,7 +49,7 @@ let package = Package(
       name: "ChartboostAdapter",
       url:
         "https://dl.google.com/googleadmobadssdk/mediation/ios/chartboost/ChartboostAdapter-9.14.2.0.zip",
-      checksum: "3f8f02c009568e7f3ca5c4a7c0e2a976e58dda3a4894c13ae88899d06f7f7bd7"
+      checksum: "5e785eb28d69ae48fb5d562843e3a3350e0736be2883a7c1f4ca82a0716e796a"
     ),
   ]
 )
